@@ -1,13 +1,25 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tailwindcss";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-blue-30: #84B9EF;
+  --color-blue-20: #9CC1E7;
+  --color-blue-10: #E2ECF5;
+  --color-blue-0: #EDEFF0;
+  --color-beige-40: #EDDFD0;
+  --color-beige-30: #F4E6DA;
+  --color-beige-20: #F1EBE5;
+  --color-beige-10: #F4F1EE;
+  --color-beige-0: #FFFFFF;
+  --color-neutral-30: #1A1615;
+  --color-neutral-20: #453F3D;
+  --color-neutral-10: #757170;
+  --color-stroke: #E4E2E2;
+  --color-dark-brown: #614A44;
+  --color-accent-brown: #754D29;
+  --color-accent-blue: #156CC2;
+  --color-accent-yellow: #CF8D13;
+  --color-accent-green: #0EA158;
+  --color-accent-orange: #C9502E;
 }
 
 html,
@@ -16,27 +28,70 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  @apply h-full bg-linear-to-t from-blue-20 via-beige-20 to-beige-0;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@utility bg-white {
+  background-color: #F9F8F8;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@utility text-h2 {
+  @apply text-[52px]/[120%] font-semibold tracking-[-0.03em] text-neutral-30;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@utility text-h3 {
+  @apply text-[40px]/[120%] font-semibold tracking-[-0.03em] text-neutral-30;
+}
+
+@utility text-h4 {
+  @apply text-[32px]/[120%] font-semibold tracking-[-0.03em] text-neutral-30;
+}
+
+@utility text-h5 {
+  @apply text-[28px]/[140%] font-semibold tracking-[-0.03em] text-neutral-30;
+}
+
+@utility text-h5 {
+  @apply text-[20px]/[140%] font-semibold tracking-[-0.03em] text-neutral-30;
+}
+
+@utility text-body-xl {
+  @apply text-[20px]/[150%] font-normal  text-neutral-20;
+}
+
+@utility text-body-large {
+  @apply text-[18px]/[150%] font-normal  text-neutral-20;
+}
+
+@utility text-body-normal {
+  @apply text-[16px]/[150%] font-normal  text-neutral-20;
+}
+
+@utility text-body-small {
+  @apply text-[14px]/[150%] font-normal  text-neutral-20;
+}
+
+@utility text-body-xs {
+  @apply text-[13px]/[120%] font-normal  text-neutral-30;
+}
+
+@utility text-label {
+  @apply text-[18px]/[1.2em] font-semibold  text-beige-0;
+}
+
+@utility text-eyebrow-large {
+  @apply text-[15px]/[125%] font-semibold  text-dark-brown;
+}
+
+@utility text-eyebrow-small {
+  @apply text-[12px]/[125%] font-semibold  text-dark-brown;
+}
+
+@utility text-testemonial {
+  @apply text-[64px]/[145%] font-medium  text-neutral-30;
+}
+
+@utility text-body-normal {
+  @apply text-[16px]/[150%] font-medium  text-neutral-20;
 }
