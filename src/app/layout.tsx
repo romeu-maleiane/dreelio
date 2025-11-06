@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ReactLenis } from '@/lib/lenis'
+
 
 const openRunde = localFont({
   src: [
@@ -42,7 +44,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${openRunde.variable}`}>
-        {children}
+        <ReactLenis root>
+          {children}
+        </ReactLenis>
       </body>
     </html>
   );

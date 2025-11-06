@@ -28,9 +28,6 @@ body {
   overflow-x: hidden;
 }
 
-html {
-  @apply h-full bg-linear-to-t from-blue-20 via-beige-20 to-beige-0;
-}
 
 @utility bg-white {
   background-color: #F9F8F8;
@@ -94,4 +91,51 @@ html {
 
 @utility text-body-normal {
   @apply text-[16px]/[150%] font-medium  text-neutral-20;
+}
+
+.content {
+  @apply bg-linear-to-t from-blue-20 via-beige-20 to-beige-0 flex h-450 flex-col items-center gap-40;
+}
+
+@layer componets {
+  .hero {
+    @apply relative lg:h-255 h-200 lg:min-h-[80vh] min-h-[70vh] flex justify-center overflow-hidden bg-linear-to-t from-beige-40 to-blue-20;
+    
+    .hero-content {
+      @apply z-2 px-5 max-w-268 pt-40 flex flex-col items-center gap-16;
+    
+      .top {
+        @apply max-w-198 flex flex-col items-center gap-10;
+      
+        .texts {
+          @apply flex flex-col items-center gap-4 text-center;
+
+          .hero-title {
+            @apply lg:text-[76px]/[120%] text-[40px]/[120%] text-neutral-30 font-bold;
+          }
+
+          .hero-description {
+            @apply lg:text-body-xl text-body-normal max-w-175;
+          }
+        }
+
+        .buttons {
+          @apply flex gap-2;
+        }
+      }
+
+      .hero-image {
+        @apply lg:h-175 md:h-125 h-119 max-w-268;
+        transform: perspective(1000px);
+      }
+    }
+  
+    .hero-left-cloud {
+      @apply absolute lg:w-fit h-fit w-65 top-50 lg:-left-105 -left-60;
+    }
+
+    .hero-right-cloud {
+      @apply absolute lg:w-fit h-fit w-65 top-50 lg:-right-105 -right-60;
+    }
+  }
 }

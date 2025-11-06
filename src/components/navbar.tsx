@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger, SplitText } from "gsap/all";
+import { useMediaQuery } from "react-responsive";
 
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -13,6 +14,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function Navbar() {
     const [openDropdown, setOpenDropdown] = useState(false)
+    const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
 
     useGSAP(() => {
         const navTween = gsap.timeline({
@@ -23,11 +25,12 @@ function Navbar() {
             }
         })
 
+        const width = isMobile ? '70%' : '60%'
         navTween.to('#navbar', { 
-            width: '70%', 
+            width: width, 
             duration: 1,
             ease: 'power1.inOut',
-        })
+        }, 0)
 
         navTween.fromTo('#navbar > nav', { backgroundColor: 'transparent' }, {
             backgroundColor: '#ffffff40',
@@ -35,7 +38,7 @@ function Navbar() {
             borderRadius: '25px',
             duration: 1,
             ease: 'power1.inOut',
-        })
+        }, 0)
 
         navTween.fromTo('#navbar > div', { backgroundColor: 'transparent' }, {
             backgroundColor: '#ffffff40',
@@ -43,11 +46,11 @@ function Navbar() {
             borderRadius: '25px',
             duration: 1,
             ease: 'power1.inOut',
-        })
+        }, 0)
     }, [])
 
     return (
-        <header className='p-5 flex justify-center fixed w-full'>
+        <header className='p-5 flex justify-center fixed z-50 w-full'>
             <div id="navbar" className="flex flex-col gap-4 w-5xl max-w-5xl">
                 <nav className="flex items-center justify-between md:pl-6 md:pr-2 py-2 px-6">
                     <Link href={'#home'} className="pointer">
