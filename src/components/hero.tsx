@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-import MainButton from "./mainButton"
+import MainButton from "./buttons/mainButton"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { SplitText } from "gsap/all"

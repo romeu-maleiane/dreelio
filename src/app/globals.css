@@ -29,6 +29,7 @@ body {
 }
 
 
+
 @utility bg-white {
   background-color: #F9F8F8;
 }
@@ -93,8 +94,17 @@ body {
   @apply text-[16px]/[150%] font-medium  text-neutral-20;
 }
 
-.content {
-  @apply bg-linear-to-t from-blue-20 via-beige-20 to-beige-0 flex h-450 flex-col items-center gap-40;
+@utility content {
+  @apply bg-linear-to-t box-border from-blue-20 via-beige-20 to-beige-0 flex h-450 flex-col items-center lg:pb-40 md:pb-24 pb-20  lg:px-0 md:px-10 px-4 lg:gap-40 md:gap-24 gap-20;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@utility animate-marquee {
+  animation: marquee 40s linear infinite;
 }
 
 @layer componets {
@@ -136,6 +146,26 @@ body {
 
     .hero-right-cloud {
       @apply absolute lg:w-fit h-fit w-65 top-50 lg:-right-105 -right-60;
+    }
+  }
+
+  .logos-ticker {
+    @apply flex w-full justify-center;
+
+    .logos-ticker-content {
+      @apply w-full max-w-5xl flex flex-col items-center gap-4;
+
+      p {
+        @apply text-center text-body-large font-semibold text-neutral-10;
+      }
+
+      .ticker {
+        @apply overflow-x-hidden h-14 w-full max-w-255 mask-[linear-gradient(to_right,transparent,black,transparent)];
+      }
+
+      .ticker > div {
+        @apply animate-marquee h-full w-full flex items-center gap-10 pr-10;
+      }
     }
   }
 }
