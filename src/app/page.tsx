@@ -1,4 +1,5 @@
 import AboutApp from "@/components/aboutApp";
+import Features from "@/components/features";
 import Hero from "@/components/hero";
 import LogosTicker from "@/components/logosTicker";
 import Navbar from "@/components/navbar";
@@ -11,6 +12,7 @@ export default function Home() {
         <div className="content">
           <LogosTicker />
           <AboutApp />
+          <Features />
         </div>
       </main>
   );
