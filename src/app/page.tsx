@@ -1,4 +1,5 @@
 import AboutApp from "@/components/aboutApp";
+import Benefits from "@/components/benefits";
 import Features from "@/components/features";
 import Hero from "@/components/hero";
 import LogosTicker from "@/components/logosTicker";
@@ -13,6 +14,7 @@ export default function Home() {
           <LogosTicker />
           <AboutApp />
           <Features />
+          <Benefits />
         </div>
       </main>
   );

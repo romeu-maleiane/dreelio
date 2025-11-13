@@ -228,4 +228,44 @@ body {
       }
     }
   }
+
+  .benefits {
+    @apply flex w-full justify-center;
+
+    .container {
+      @apply flex flex-col items-center gap-14 w-full max-w-5xl;
+    
+      .header {
+        @apply w-full max-w-200 flex flex-col items-center gap-5 text-center;
+      }
+
+      .cards {
+        @apply w-full flex flex-col gap-6;
+
+        .top {
+          @apply w-full flex lg:flex-row gap-6 flex-col;
+
+          .card-top-1 {
+            @apply p-8 flex flex-col gap-20 items-center bg-[#F0EAE5] rounded-3xl;
+          }
+
+          .card-top-2 {
+            @apply w-full p-8 flex flex-col gap-20 items-center bg-[#F0EAE5] rounded-3xl;
+          }
+        }
+
+        .bottom {
+          @apply w-full flex lg:flex-row flex-col gap-6;
+        }
+      }
+    }
+  }
+
+  .integrations-ticker {
+    @apply h-18 w-full overflow-x-hidden mask-[linear-gradient(to_right,transparent,black,transparent)];
+
+    .integrations-ticker-1, .integrations-ticker-2 {
+      @apply flex-nowrap gap-4 flex;
+    }
+  }
 }

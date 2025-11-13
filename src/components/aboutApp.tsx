@@ -11,6 +11,21 @@ function AboutApp() {
     useGSAP(() => {
         gsap.timeline({
             scrollTrigger: {
+                trigger: `.about-app`,
+                start: 'top bottom',
+            }
+        }).fromTo(`.about-app`, {
+            opacity: 0,
+            translateY: '64px',
+            ease: 'power2.inOut',
+            duration: 1
+        }, {
+            opacity: 1,
+            translateY: '0',
+        })
+
+        gsap.timeline({
+            scrollTrigger: {
                 trigger: '.about-app-images',
                 start: 'top bottom',
                 end: 'bottom bottom',
