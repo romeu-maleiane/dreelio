@@ -4,6 +4,7 @@ import Features from "@/components/features";
 import Hero from "@/components/hero";
 import LogosTicker from "@/components/logosTicker";
 import Navbar from "@/components/navbar";
+import Reviews from "@/components/reviews";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <AboutApp />
           <Features />
           <Benefits />
+          <Reviews />
         </div>
       </main>
   );
