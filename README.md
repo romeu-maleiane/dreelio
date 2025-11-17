@@ -1,8 +1,10 @@
-# dreelio 🚀✨
+# dreelio 🚀🌟
 
-This project was inspired by a Framer template and rebuilt from scratch using **Next.js**, **GSAP**, and **Tailwind CSS**. 
+Welcome to **dreelio** — a creative project inspired by a Framer template and fully rebuilt from the ground up with **Next.js**, **GSAP**, and **Tailwind CSS**!
 
-🌈✨ The site features smooth animations that bring life to every scroll, creating an engaging and interactive experience! 🔥📱
+✨ Every scroll unlocks captivating animations that inject life and motion into each page. Experience a vibrant, interactive feel designed for modern web users. 🎉🖥️📱
+
+[Live Website](https://dreelio.vercel.app/)
 
 ![Dreelio Preview](https://drive.google.com/uc?id=1h760I0JiqadLoTqHg-XJ_zCNnCO3KsZK)
 
