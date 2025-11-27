@@ -1,5 +1,6 @@
 import AboutApp from "@/components/aboutApp";
 import Benefits from "@/components/benefits";
+import Blog from "@/components/blog";
 import Features from "@/components/features";
 import Hero from "@/components/hero";
 import LogosTicker from "@/components/logosTicker";
@@ -19,6 +20,7 @@ export default function Home() {
           <Benefits />
           <Reviews />
           <Pricing />
+          <Blog />
         </div>
       </main>
   );

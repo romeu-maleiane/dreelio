@@ -316,4 +316,28 @@ body {
     
     }
   }
+
+  .blog {
+    @apply flex w-full justify-center;
+
+    .container {
+      @apply flex flex-col items-center gap-14 w-full max-w-5xl;
+    
+      .header {
+        @apply w-full max-w-200 flex flex-col items-center gap-5 text-center;
+      }
+
+      .blog-cards {
+        @apply flex flex-col gap-6;
+
+        .big-card {
+          @apply lg:h-[480px] md:h-[600px] h-fit flex lg:flex-row flex-col md:gap-8 gap-6 pt-2 lg:pr-8 pr-2 lg:pb-2 pb-8 pl-2 bg-white/70 rounded-2xl;
+        }
+
+        .bottom-cards {
+          @apply flex lg:flex-row flex-col justify-between gap-6;
+        }
+      }
+    }
+  }
 }
